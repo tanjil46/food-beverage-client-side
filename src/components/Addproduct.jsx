@@ -1,6 +1,29 @@
+import Swal from "sweetalert2";
+
 
 
 const Addproduct = () => {
+
+ //https://i.ibb.co/M7NYL8Q/coca-cola.jpg
+//https://i.ibb.co/Dg9BsrX/donald.jpg//donald
+//https://i.ibb.co/n6tVD4m/Kellogg.jpg
+//https://i.ibb.co/71sgT4w/Nestle.jpg
+//https://i.ibb.co/s1sMY8T/pepcico.jpg
+//https://i.ibb.co/68vYYLx/star.jpg
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -16,13 +39,59 @@ const Addproduct = () => {
     const shortDescription=event.target.short.value;
     const rating=event.target.rating.value;
 
-    const productInfo={name,image,type,price,shortDescription,rating}
+   
+   
+   const product={name,image,type,price,shortDescription,rating}
     
- console.log(productInfo)
+ console.log(product)
+
+
+   fetch('http://localhost:5000/product',{
+
+    method:'POST',
+    headers:{
+        'content-type':'application/json'
+    },
+    body:JSON.stringify(product)
 
 
 
- }
+
+
+   })
+   .then(res=>res.json())
+   .then(data=>{
+    console.log(data)
+    if(data.insertedId){
+        Swal.fire(
+            'SUCCESS!',
+            'Your Product Has Added',
+            'success'
+          )
+    }
+   })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ };
 
 
 
@@ -146,7 +215,7 @@ const Addproduct = () => {
 </div>
 
  <div className="text-center my-6">
-    <button className="btn bg-gradient-to-r from-violet-500 to-fuchsia-500">Add Product</button>
+    <button type="submit" className="btn bg-gradient-to-r from-violet-500 to-fuchsia-500">Add Product</button>
  </div>
 
 

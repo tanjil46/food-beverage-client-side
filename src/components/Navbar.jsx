@@ -1,9 +1,57 @@
 import { Link, NavLink } from "react-router-dom";
 
 import LOGO from './img/logo.jpg'
+import { useContext } from "react";
+import { AuthContext } from "./AuthProvider";
+import Swal from "sweetalert2";
 
 
 const Navbar = () => {
+
+
+
+ const{user,userLogOut}=useContext(AuthContext)
+
+
+
+
+
+ const userSingOutHandler=()=>{
+    userLogOut()
+    .then(()=>{
+      
+        Swal.fire(
+            'Sucess!',
+            'Succesfully LogOut',
+             'success'
+           )
+
+    })
+    .catch(error=>{
+        console.log(error.message)
+        Swal.fire(
+            'Error!',
+            `${error.message}`,
+            'error'
+        )
+    })
+ }
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     return (
     <div className="my-4">
@@ -50,8 +98,23 @@ const Navbar = () => {
 </div>
 
    
-  <div className="">
+  <div className="flex items-center">
+    {
+        user&&<p className="font-bold bg-blue-500 py-2 px-4 text-white rounded-2xl">{user.email}</p>
+    }
+
+   {
+    user? <button onClick={userSingOutHandler} className="btn">Sing Out</button>:
     <Link to='/login'>Login</Link>
+   }
+
+
+
+
+
+
+
+   
   </div>
 
 
