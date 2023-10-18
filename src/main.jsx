@@ -16,6 +16,8 @@ import ProductById from './components/ProductById';
 import Login from './components/Login';
 import Resister from './components/Resister';
 import AuthProvider from './components/AuthProvider';
+import DetailsOfProducts from './components/DetailsOfProducts';
+import CardAdd from './components/CardAdd';
 
 
 const router=createBrowserRouter([
@@ -50,6 +52,16 @@ const router=createBrowserRouter([
       path:'/resis',
       element:<Resister></Resister>
 
+     },
+     {
+      path:'/details/:id',
+      element:<DetailsOfProducts></DetailsOfProducts>,
+      loader:()=>fetch('http://localhost:5000/product')
+     },
+     {
+      path:'/cart',
+      element:<CardAdd></CardAdd>,
+      loader:()=>fetch('http://localhost:5000/cart')
      }
 
      
