@@ -1,0 +1,23 @@
+[
+    {
+      "name": "Alice Smith",
+      "email": "alice.smith@example.com",
+      "review": "The food at this restaurant was amazing! I had the steak and it was cooked to perfection. The cocktails were also delicious. I highly recommend this place."
+    },
+    {
+      "name": "John Doe",
+      "email": "john.doe@example.com",
+      "review": "I was pleasantly surprised by the quality of the food and beverages here. The service was excellent, and the wine selection was impressive. Will definitely be coming back."
+    },
+    {
+      "name": "Eva Brown",
+      "email": "eva.brown@example.com",
+      "review": "The food was disappointing, but the drinks made up for it. I had a great time with my friends, thanks to the fantastic cocktails. Service was friendly too."
+    },
+    {
+      "name": "David Johnson",
+      "email": "david.johnson@example.com",
+      "review": "The food was excellent, and the beer selection was extensive. I particularly enjoyed the craft beers. The atmosphere was lively, making it a great place to unwind."
+    }
+  ]
+  

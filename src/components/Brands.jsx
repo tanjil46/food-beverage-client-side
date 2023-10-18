@@ -16,6 +16,7 @@ const Brands = ({brand}) => {
     return (
         <div>
             <Link to={`/product/${brand_name}`}>
+              
        <div  className="card  bg-base-100 ">
   <figure><img className='lg:w-[400px] w-full h-[200px]'  src={image} alt="food/beverage" /></figure>
   <div className="card-body">

@@ -1,0 +1,56 @@
+[
+    {
+        "company": "Coca-Cola",
+        "location": "Atlanta, Georgia, USA",
+        "id": 1,
+        "first_publish_date": "May 8, 1886",
+        "manager_name": "James Quincey",
+        "inventor_name": "John S. Pemberton",
+        "company_img": "https://i.ibb.co/tz4x6qd/coca.jpg"
+    },
+    {
+        "company": "McDonald's",
+        "location": "Chicago, Illinois, USA",
+        "id": 2,
+        "first_publish_date": "April 15, 1955",
+        "manager_name": "Chris Kempczinski",
+        "inventor_name": "Richard and Maurice McDonald",
+        "company_img": "https://i.ibb.co/TH3CMqZ/mcdo.jpg"
+    },
+    {
+        "company": "Starbucks",
+        "location": "Seattle, Washington, USA",
+        "id": 3,
+        "first_publish_date": "March 30, 1971",
+        "manager_name": "Kevin Johnson",
+        "inventor_name": "Gordon Bowker, Jerry Baldwin, Zev Siegl",
+        "company_img": "https://i.ibb.co/mSndSYt/satr.jpg"
+    },
+    {
+        "company": "PepsiCo",
+        "location": "Purchase, New York, USA",
+        "id": 4,
+        "first_publish_date": "August 28, 1898",
+        "manager_name": "Ramon Laguarta",
+        "inventor_name": "Caleb Bradham",
+        "company_img": "https://i.ibb.co/sPwwTSN/pep.jpg"
+    },
+    {
+        "company": "Nestlé",
+        "location": "Vevey, Switzerland",
+        "id": 5,
+        "first_publish_date": "1867",
+        "manager_name": "Mark Schneider",
+        "inventor_name": "Henry Nestlé",
+        "company_img": "https://i.ibb.co/wr67WWs/nesle.jpg"
+    },
+    {
+        "company": "Kellogg's",
+        "location": "Battle Creek, Michigan, USA",
+        "id": 6,
+        "first_publish_date": "February 19, 1906",
+        "manager_name": "Steve Cahillane",
+        "inventor_name": "John Harvey Kellogg, Will Keith Kellogg",
+        "company_img": "https://i.ibb.co/DRpZFHj/images.jpg" 
+    }
+]
