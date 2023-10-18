@@ -78,8 +78,8 @@ const Navbar = () => {
     </div>
 
 
-   <div className="space-x-4 font-bold text-center text-white py-3 rounded-lg px-4 w-full lg:w-[50%] lg:text-lg bg-gradient-to-r from-green-500 to-pink-500  ">
-      <NavLink  to="/" className={({ isActive, isPending }) =>
+   <div className="space-x-4 font-bold justify-center  text-white py-3 rounded-lg px-4 w-full lg:w-[50%] lg:text-lg bg-gradient-to-r from-green-500 to-pink-500  ">
+      <NavLink   to="/" className={({ isActive, isPending }) =>
     isPending ? "pending" : isActive ? "text-green-400 underline" : ""}>Home</NavLink>
 
 
