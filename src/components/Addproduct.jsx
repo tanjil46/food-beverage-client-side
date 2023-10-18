@@ -1,3 +1,4 @@
+
 import Swal from "sweetalert2";
 
 
@@ -38,10 +39,10 @@ const Addproduct = () => {
     const price=event.target.price.value;
     const shortDescription=event.target.short.value;
     const rating=event.target.rating.value;
-
+    const brandName=event.target.brand.value;
    
    
-   const product={name,image,type,price,shortDescription,rating}
+   const product={name,image,type,price,shortDescription,rating,brandName}
     
  console.log(product)
 
@@ -171,11 +172,11 @@ const Addproduct = () => {
 
 <div className="form-control">
 <label className="label">
-<span className="label-text font-bold text-pink-600">Short_Description</span>
+<span className="label-text font-bold text-pink-600">Brand Name</span>
 </label>
 <label className="input-group">
 
-<input type="text" placeholder="Product Description" name="short" className="input input-bordered" />
+<input type="text" placeholder="Product Brand" name="brand" className="input input-bordered" />
 </label>
 </div>
 
@@ -213,6 +214,26 @@ const Addproduct = () => {
 </div>
 
 </div>
+
+
+
+<div className="form-control ">
+<label className="label">
+<span className="label-text font-bold text-pink-600">Short_Description</span>
+</label>
+<label className="input-group">
+
+<input type="text" placeholder="Product Image" name="short" className="input input-bordered" />
+</label>
+</div>
+
+
+
+
+
+
+
+
 
  <div className="text-center my-6">
     <button type="submit" className="btn bg-gradient-to-r from-violet-500 to-fuchsia-500">Add Product</button>

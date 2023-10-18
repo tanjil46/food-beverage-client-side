@@ -1,13 +1,14 @@
 import { useLoaderData } from "react-router-dom";
 import Banner from "./Banner";
-import Products from "./Products";
+
+import Brands from "./Brands";
 
 
 
 
 const Home = () => {
    
- const products=useLoaderData()
+ const brands=useLoaderData()
  
 
 
@@ -19,7 +20,7 @@ const Home = () => {
          <p className="text-center text-2xl font-bold">Here Our Some Food Catogory</p>
          <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-5 p-12">
          {
-            products.slice(0,6).map(product=><Products product={product} key={product._id}></Products>)
+           brands.map(brand=><Brands brand={brand} key={brand.id}></Brands>)
          }
             </div>
         </div>

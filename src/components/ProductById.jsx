@@ -1,16 +1,43 @@
-import { useParams } from "react-router-dom";
+
+import { useLoaderData, useParams } from "react-router-dom";
+import BrandsProductShow from "./BrandsProductShow";
 
 
 const ProductById = () => {
-  
-    const {id}=useParams()
-    console.log(id)
-    
  
+    const {brand_name}=useParams()
+
+    
+ const products=useLoaderData()
+
+
+
+
+
+
+ const brandNameMatching=products.filter(product=>product.brandName==brand_name)
+
+
+
+
+
+ console.log(brandNameMatching)
+
+
+
+
 
     return (
         <div>
-            prduct
+            <div className="grid grid-cols-1 lg:grid-cols-2">
+       
+      {
+        brandNameMatching.map(brandProduct=><BrandsProductShow brandProduct={brandProduct} key={brandProduct._id}></BrandsProductShow>)
+      }
+
+   </div>
+
+
         </div>
     );
 };
