@@ -34,7 +34,7 @@ const BrandsProductShow = ({brandProduct}) => {
       <Link to={`/details/${_id}`} className="btn btn-primary">Details</Link>
 
 
-      <button className="btn btn-secondary">Update Now</button>
+      <Link to={`/update/${_id}`} className="btn btn-secondary">Update Now</Link>
       </div>
 
   </div>

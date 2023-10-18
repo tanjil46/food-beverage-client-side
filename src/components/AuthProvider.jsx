@@ -8,6 +8,7 @@ import auth from "./firebase.config";
 export const AuthContext=createContext(null)
 const AuthProvider = ({children}) => {
     const googleProvider=new GoogleAuthProvider()
+    const [loading,setLoading]=useState(true)
     const[user,setUser]=useState(null)
 
 
@@ -15,15 +16,18 @@ const AuthProvider = ({children}) => {
 
 
     const createUser=(email,Password)=>{
+      setLoading(true)
       return createUserWithEmailAndPassword(auth,email,Password)
   
     };
     
     const userSingIn=(email,password)=>{
+      setLoading(true)
       return  signInWithEmailAndPassword(auth,email,password)
     };
 
     const googleLogIn=()=>{
+      setLoading(true)
       return signInWithPopup(auth,googleProvider)
     }
     
@@ -31,6 +35,7 @@ const AuthProvider = ({children}) => {
 
 
  const userLogOut=()=>{
+  setLoading(true)
     return signOut(auth)
  }
 
@@ -47,7 +52,7 @@ const AuthProvider = ({children}) => {
         const unSubscribe=onAuthStateChanged(auth,currentUser=>{
        
           setUser(currentUser)
-      
+          setLoading(false)
            })
      
           return ()=>{
@@ -62,7 +67,7 @@ const AuthProvider = ({children}) => {
 
 
 
-const authValues={user,createUser,userSingIn,googleLogIn,userLogOut}
+const authValues={user,createUser,userSingIn,googleLogIn,userLogOut,loading}
 
 
 

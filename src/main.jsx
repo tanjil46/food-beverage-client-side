@@ -18,6 +18,10 @@ import Resister from './components/Resister';
 import AuthProvider from './components/AuthProvider';
 import DetailsOfProducts from './components/DetailsOfProducts';
 import CardAdd from './components/CardAdd';
+import UpdateForm from './components/UpdateForm';
+import PrivateRouteOfAddProduct from './components/PrivateRouteOfAddProduct';
+import PrivateDetails from '../PrivateDetails';
+import PrivateOfCart from './components/PrivateOfCart';
 
 
 const router=createBrowserRouter([
@@ -36,7 +40,7 @@ const router=createBrowserRouter([
      
      {
       path:'/product',
-      element:<Addproduct></Addproduct>
+      element:<PrivateRouteOfAddProduct><Addproduct></Addproduct></PrivateRouteOfAddProduct>
      },
      {
       path:'/product/:brand_name',
@@ -55,13 +59,18 @@ const router=createBrowserRouter([
      },
      {
       path:'/details/:id',
-      element:<DetailsOfProducts></DetailsOfProducts>,
+      element:<PrivateDetails><DetailsOfProducts></DetailsOfProducts></PrivateDetails>,
       loader:()=>fetch('http://localhost:5000/product')
      },
      {
       path:'/cart',
-      element:<CardAdd></CardAdd>,
+      element:<PrivateOfCart><CardAdd></CardAdd></PrivateOfCart>,
       loader:()=>fetch('http://localhost:5000/cart')
+     },
+     {
+      path:'/update/:id',
+      element:<UpdateForm></UpdateForm>,
+      // loader:({params})=>fetch(`http://localhost:5000/product/${params.id}`)
      }
 
      
