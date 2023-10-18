@@ -70,7 +70,7 @@ const Navbar = () => {
 
 
 
-     <nav className="flex justify-between items-center  lg:px-12 px-8 rounded-xl"    >
+     <nav className="navbar flex lg:justify-between lg:flex-row lg:items-center flex-col justify-center   lg:px-12 px-8 rounded-xl space-y-5"    >
      
 
      <div className="">
@@ -78,7 +78,7 @@ const Navbar = () => {
     </div>
 
 
-   <div className="space-x-4 ">
+   <div className="space-x-4 font-bold text-center text-white py-3 rounded-lg px-4 w-full lg:w-[50%] lg:text-lg bg-gradient-to-r from-green-500 to-pink-500  ">
       <NavLink  to="/" className={({ isActive, isPending }) =>
     isPending ? "pending" : isActive ? "text-green-400 underline" : ""}>Home</NavLink>
 
@@ -104,8 +104,8 @@ const Navbar = () => {
     }
 
    {
-    user? <button onClick={userSingOutHandler} className="btn">Sing Out</button>:
-    <Link to='/login'>Login</Link>
+    user? <button  onClick={userSingOutHandler} className="btn bg-gradient-to-r from-purple-500 to-pink-500 ">Sing Out</button>:
+    <Link className="btn bg-gradient-to-r from-blue-500 to-pink-500" to='/login'>Login</Link>
    }
 
 

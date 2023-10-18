@@ -49,7 +49,11 @@ const googleLogInHandler=()=>{
      googleLogIn()
      .then((result)=>{
         console.log(result.user)
-        
+        Swal.fire(
+          'Sucess!',
+          'Succesfully Login',
+           'success'
+         )
       
        })
        .catch(error=>{
