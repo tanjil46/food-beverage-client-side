@@ -1,8 +1,10 @@
 
 import { useLoaderData, useParams } from "react-router-dom";
 import BrandsProductShow from "./BrandsProductShow";
-import MCD from './img/mcD.jpg'
-import NESTLE from './img/nes.jpg'
+import MCD from './img/mcAd.jpg'
+import NESTLE from './img/nesleAd.jpg'
+import COCA from './img/cocaADD.jpg'
+import STAR from './img/starAdd.jpg'
 
 const ProductById = () => {
  
@@ -44,14 +46,14 @@ const brandNameMatching=products.filter(product=>product.brandName==brand_name)
     </div>
   </div> 
   <div id="slide3" className="carousel-item relative w-full">
-    <img src="/images/stock/photo-1414694762283-acccc27bca85.jpg" className="w-full" />
+    <img src={COCA} className="w-full" />
     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
       <a href="#slide2" className="btn btn-circle">❮</a> 
       <a href="#slide4" className="btn btn-circle">❯</a>
     </div>
   </div> 
   <div id="slide4" className="carousel-item relative w-full">
-    <img src="/images/stock/photo-1665553365602-b2fb8e5d1707.jpg" className="w-full" />
+    <img src={STAR} className="w-full" />
     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
       <a href="#slide3" className="btn btn-circle">❮</a> 
       <a href="#slide1" className="btn btn-circle">❯</a>
@@ -63,11 +65,11 @@ const brandNameMatching=products.filter(product=>product.brandName==brand_name)
 
 
 
+       
+          <p className="text-center font-bold text-2xl my-4 bg-gradient-to-r from-green-600 to-orange-600 py-2 rounded-lg text-white">Product List The Brand You Choose</p>
 
 
-
-
-            <div className="grid grid-cols-1 lg:grid-cols-2">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 p-20">
        
       {
         brandNameMatching.map(brandProduct=><BrandsProductShow brandProduct={brandProduct} key={brandProduct._id}></BrandsProductShow>)

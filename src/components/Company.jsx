@@ -24,7 +24,7 @@ useEffect(()=>{
 
     return (
         <div>
-            <p className="text-center font-bold text-2xl my-4 ">Information Of Our Company</p>
+            <p className="text-center font-bold text-2xl my-4 bg-gradient-to-r from-green-600 to-orange-600 py-2 rounded-lg text-white">Information Of Our Company</p>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 p-10 gap-6">
 

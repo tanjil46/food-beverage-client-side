@@ -95,7 +95,7 @@ const resisterHandler=e=>{
             <div className="hero min-h-screen bg-base-200">
   <div className="hero-content flex-col lg:flex-row-reverse">
    
-    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-gradient-to-r from-purple-500 to-pink-500">
+    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-gradient-to-r from-purple-600 to-orange-600">
       <form onSubmit={resisterHandler} className="card-body">
      
         <div className="form-control">
@@ -132,7 +132,7 @@ const resisterHandler=e=>{
          </div>
         </div>
         <div className="form-control mt-6">
-          <button className="btn btn-primary">Resister</button>
+          <button className="btn bg-pink-600 font-bold text-white">Resister</button>
         </div>
            <p className="">Already Resistered!<Link className="text-white text-xl" to='/login'>Login </Link> </p>
       </form>

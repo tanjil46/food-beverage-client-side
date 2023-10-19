@@ -1,5 +1,5 @@
 
-
+import PropTypes from 'prop-types';
 const ShowReview = ({revie}) => {
  const{name,email,review}=revie
 
@@ -11,5 +11,20 @@ const ShowReview = ({revie}) => {
         </div>
     );
 };
+
+
+ 
+ShowReview.propTypes={
+  revie:PropTypes.object,
+    
+    
+    }
+
+
+
+
+
+
+
 
 export default ShowReview;

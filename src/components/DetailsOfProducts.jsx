@@ -46,23 +46,11 @@ const DetailsOfProducts = () => {
 
  }
 
-
-
-
-
-
-
-
-
-
-
-
-
-    return (
+return (
         <div className="my-5 lg:p-20">
        
 
-       <div className="card bg-base-100 shadow-xl">
+       <div className="card bg-base-100 ">
   <figure className="px-10 pt-10">
     <img   src={image} alt="product" className="w-full rounded-xl" />
   </figure>

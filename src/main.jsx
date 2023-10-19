@@ -22,6 +22,7 @@ import UpdateForm from './components/UpdateForm';
 import PrivateRouteOfAddProduct from './components/PrivateRouteOfAddProduct';
 import PrivateDetails from '../PrivateDetails';
 import PrivateOfCart from './components/PrivateOfCart';
+import NoData from './components/NoData';
 
 
 const router=createBrowserRouter([
@@ -71,6 +72,10 @@ const router=createBrowserRouter([
       path:'/update/:id',
       element:<UpdateForm></UpdateForm>,
       // loader:({params})=>fetch(`http://localhost:5000/product/${params.id}`)
+     },
+     {
+      path:'/nodata',
+      element:<NoData></NoData>
      }
 
      

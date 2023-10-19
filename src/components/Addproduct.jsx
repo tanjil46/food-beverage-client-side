@@ -4,31 +4,6 @@ import Swal from "sweetalert2";
 
 
 const Addproduct = () => {
-
- //https://i.ibb.co/M7NYL8Q/coca-cola.jpg
-//https://i.ibb.co/Dg9BsrX/donald.jpg//donald
-//https://i.ibb.co/n6tVD4m/Kellogg.jpg
-//https://i.ibb.co/71sgT4w/Nestle.jpg
-//https://i.ibb.co/s1sMY8T/pepcico.jpg
-//https://i.ibb.co/68vYYLx/star.jpg
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
  const addProductHandler=event=>{
 
  event.preventDefault()

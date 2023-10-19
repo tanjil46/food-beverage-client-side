@@ -2,11 +2,12 @@ import PropTypes from 'prop-types';
 
 import { Link } from 'react-router-dom';
 
+
 const Brands = ({brand}) => {
 
- const{brand_name,image}=brand
+ const{brand_name,image}=brand;
 
-;
+//`/product/${brand_name}` 
 
 
 
@@ -15,7 +16,7 @@ const Brands = ({brand}) => {
 
     return (
         <div>
-            <Link to={`/product/${brand_name}`}>
+            <Link to={brand_name? `/product/${brand_name}` :'/nodata'}>
               
        <div  className="card  bg-base-100 ">
   <figure><img className='lg:w-[400px] w-full h-[200px]'  src={image} alt="food/beverage" /></figure>
@@ -42,7 +43,7 @@ const Brands = ({brand}) => {
 
 
 Brands.propTypes = {
-    brand: PropTypes.array
+    brand: PropTypes.object
   };
 
 

@@ -1,5 +1,5 @@
 import Swal from "sweetalert2";
-
+import PropTypes from 'prop-types';
 
 const CartShow = ({addCart,addCarts,setAddcarts}) => {
 
@@ -53,18 +53,7 @@ const CartShow = ({addCart,addCarts,setAddcarts}) => {
  }
 
 
-
-
-
-
-
-
-
-
-
-
-
-    return (
+ return (
         <div className="flex justify-between bg-orange-400 m-10 items-center p-4 rounded-xl">
             
         <div className="">
@@ -94,5 +83,20 @@ const CartShow = ({addCart,addCarts,setAddcarts}) => {
         </div>
     );
 };
+
+
+
+CartShow.propTypes={
+  addCart:PropTypes.object,
+  addCarts:PropTypes.any,
+  setAddcarts:PropTypes.any
+    
+    
+    }
+
+
+
+
+
 
 export default CartShow;

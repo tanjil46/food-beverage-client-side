@@ -78,7 +78,7 @@ const googleLogInHandler=()=>{
   <div className="hero-content ">
   
 
-    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl  bg-gradient-to-r from-violet-500 to-fuchsia-500">
+    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl  bg-gradient-to-r from-blue-600 to-fuchsia-500">
     <div className="">
     <p className="text-center text-xl font-bold">Login Now</p>
        </div>
@@ -100,9 +100,9 @@ const googleLogInHandler=()=>{
           </label>
         </div>
         <div className="form-control mt-6">
-          <button className="btn btn-primary">Login</button>
+          <button className="btn bg-pink-600 text-white font-bold">Login</button>
         </div>
-        <p className="">New Here! <Link className="btn font-bold  bg-gradient-to-r from-yellow-500 to-orange-500 "  to='/resis'>Resister</Link> Or</p>
+        <p className=""> <span className="text-lg font-bold text-red-700">New Here!</span> <Link className="btn font-bold  bg-gradient-to-r from-yellow-500 to-orange-500 "  to='/resis'>Resister</Link> Or</p>
         <p className="text-center">Login With</p>
         <button onClick={googleLogInHandler} className="btn bg-gradient-to-r from-blue-500 to-orange-500">Google</button>
       </form>
