@@ -1,13 +1,15 @@
-import { useLoaderData } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import Swal from "sweetalert2";
+
 
 
 const UpdateForm = () => {
+  
 
-    const products=useLoaderData()
 
-    const{_id,name,image,type,price,rating,brandName}=products
 
-  console.log(products)
+  const {id}=useParams()
+  console.log(id)
 
     const updateProductHandler=event=>{
 
@@ -25,7 +27,7 @@ const UpdateForm = () => {
           const updateProduct={name,image,type,price,rating,brandName}
            
    
-        fetch(`http://localhost:5000/product/${_id}`,{
+        fetch(`http://localhost:5000/update/${id}`,{
        method:'PUT',
     headers:{
         'content-type':'application/json'
@@ -36,12 +38,18 @@ const UpdateForm = () => {
          .then(res=>res.json())
         .then(data=>{
         console.log(data)
+        if(data.modifiedCount>0){
+          Swal.fire(
+            'SUccess',
+            'Product Succesfully Updated',
+            'success'
+          )
+        }
 
         })
         
 
     
-
 
 
 
@@ -85,7 +93,7 @@ const UpdateForm = () => {
   </label>
   <label className="input-group">
 
-    <input type="text" placeholder="Product Name" name="name" defaultValue={name} className="input input-bordered" />
+    <input type="text" placeholder="Product Name" name="name" className="input input-bordered" />
   </label>
 </div>
 
@@ -97,7 +105,7 @@ const UpdateForm = () => {
   </label>
   <label className="input-group">
 
-    <input type="text" placeholder="Product Type" name="type" defaultValue={type} className="input input-bordered" />
+    <input type="text" placeholder="Product Type" name="type" className="input input-bordered" />
   </label>
 </div>
 
@@ -115,7 +123,7 @@ const UpdateForm = () => {
 </label>
 <label className="input-group">
 
-<input type="text" placeholder="Product Price" name="price" defaultValue={price} className="input input-bordered" />
+<input type="text" placeholder="Product Price" name="price"  className="input input-bordered" />
 </label>
 </div>
 
@@ -127,7 +135,7 @@ const UpdateForm = () => {
 </label>
 <label className="input-group">
 
-<input type="text" placeholder="Product Brand" name="brand" defaultValue={brandName} className="input input-bordered" />
+<input type="text" placeholder="Product Brand" name="brand"  className="input input-bordered" />
 </label>
 </div>
 
@@ -148,7 +156,7 @@ const UpdateForm = () => {
 </label>
 <label className="input-group">
 
-<input type="text" placeholder="Product Rating" name="rating" defaultValue={rating} className="input input-bordered" />
+<input type="text" placeholder="Product Rating" name="rating" className="input input-bordered" />
 </label>
 </div>
 
@@ -160,7 +168,7 @@ const UpdateForm = () => {
 </label>
 <label className="input-group">
 
-<input type="text" placeholder="Product Image" name="img" defaultValue={image} className="input input-bordered" />
+<input type="text" placeholder="Product Image" name="img"  className="input input-bordered" />
 </label>
 </div>
 

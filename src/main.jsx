@@ -71,7 +71,7 @@ const router=createBrowserRouter([
      {
       path:'/update/:id',
       element:<UpdateForm></UpdateForm>,
-      // loader:({params})=>fetch(`http://localhost:5000/product/${params.id}`)
+    
      },
      {
       path:'/nodata',

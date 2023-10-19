@@ -95,13 +95,13 @@ const Addproduct = () => {
         
 
          <div className="my-6 p-24 bg-orange-300">
-         <p className="text-center text-2xl font-bold text-pink-600">Please Add Your Products</p>
+         <p className="text-center text-xl md:text-2xl font-bold text-pink-600">Please Add Your Products</p>
            <form onSubmit={addProductHandler}>
 
 
          {/* first  */}
 
-          <div className="flex justify-between">
+          <div className="flex md:justify-between items-center md:flex-row flex-col">
 
          <div className="form-control">
   <label className="label">
@@ -131,7 +131,7 @@ const Addproduct = () => {
 
 
 
-                              <div className="flex justify-between">
+                              <div className="flex items-center md:justify-between md:flex-row flex-col">
 
 <div className="form-control">
 <label className="label">
@@ -164,7 +164,9 @@ const Addproduct = () => {
 
 
 
-                      <div className="flex justify-between">
+                      <div className="flex items-center md:justify-between md:flex-row flex-col
+                      
+                      ">
 
 <div className="form-control">
 <label className="label">
@@ -191,17 +193,18 @@ const Addproduct = () => {
 </div>
 
 
+<div className="flex justify-center">
 
-<div className="form-control ">
-<label className="label">
+<div className="form-control  ">
+<label className="label  ">
 <span className="label-text font-bold text-pink-600">Short_Description</span>
 </label>
-<label className="input-group">
+<label className="input-group text-center">
 
-<input type="text" placeholder="Product Image" name="short" className="input input-bordered" />
+<input type="text" placeholder="Product Image" name="short" className="input input-bordered w-[100%] " />
 </label>
 </div>
-
+</div>
 
 
 
