@@ -1,9 +1,9 @@
-import { useLoaderData, useParams } from "react-router-dom";
+import { useLoaderData, useNavigate, useParams } from "react-router-dom";
 import Swal from "sweetalert2";
 
 
 const DetailsOfProducts = () => {
- 
+ const navigate=useNavigate()
     const {id}=useParams()
     const productDetail=useLoaderData()
    
@@ -41,6 +41,7 @@ const DetailsOfProducts = () => {
                 'Successfully Add To Cart',
                 'success'
             )
+            navigate('/cart')
         }
      })
 

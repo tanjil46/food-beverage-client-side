@@ -23,6 +23,7 @@ import PrivateRouteOfAddProduct from './components/PrivateRouteOfAddProduct';
 import PrivateDetails from '../PrivateDetails';
 import PrivateOfCart from './components/PrivateOfCart';
 import NoData from './components/NoData';
+import PrivateOfUpdate from './components/PrivateOfUpdate';
 
 
 const router=createBrowserRouter([
@@ -70,7 +71,8 @@ const router=createBrowserRouter([
      },
      {
       path:'/update/:id',
-      element:<UpdateForm></UpdateForm>,
+      element:<PrivateOfUpdate><UpdateForm></UpdateForm></PrivateOfUpdate>
+    
     
      },
      {

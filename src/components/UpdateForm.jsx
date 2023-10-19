@@ -1,10 +1,12 @@
-import { useParams } from "react-router-dom";
+
+import { useNavigate, useParams } from "react-router-dom";
 import Swal from "sweetalert2";
 
 
 
 const UpdateForm = () => {
-  
+
+const navigate=useNavigate()
 
 
 
@@ -44,21 +46,14 @@ const UpdateForm = () => {
             'Product Succesfully Updated',
             'success'
           )
-        }
+          navigate('/')
 
+        }
+               
         })
         
 
-    
-
-
-
-
-
-
-
-
-    }
+  };
 
 
 
@@ -85,7 +80,7 @@ const UpdateForm = () => {
           <form onSubmit={updateProductHandler}>
          {/* first  */}
 
-          <div className="flex justify-between">
+          <div className="flex md:justify-between items-center md:flex-row flex-col">
 
          <div className="form-control">
   <label className="label">
@@ -93,7 +88,7 @@ const UpdateForm = () => {
   </label>
   <label className="input-group">
 
-    <input type="text" placeholder="Product Name" name="name" className="input input-bordered" />
+    <input type="text" placeholder="Product Name" name="name"  className="input input-bordered" />
   </label>
 </div>
 
@@ -115,7 +110,7 @@ const UpdateForm = () => {
 
 
 
-                              <div className="flex justify-between">
+                              <div className="flex md:justify-between items-center md:flex-row flex-col">
 
 <div className="form-control">
 <label className="label">
@@ -148,7 +143,7 @@ const UpdateForm = () => {
 
 
 
-                      <div className="flex justify-between">
+                      <div className="flex md:justify-between items-center md:flex-row flex-col">
 
 <div className="form-control">
 <label className="label">
