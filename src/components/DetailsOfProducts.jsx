@@ -25,7 +25,7 @@ const DetailsOfProducts = () => {
 
  console.log(cartAdded)
 
-     fetch('http://localhost:5000/cart',{
+     fetch('https://food-beverage-server-9nzyy2omn-tanjils-projects.vercel.app/cart',{
         method:"POST",
         headers:{
             'content-type':'application/json'

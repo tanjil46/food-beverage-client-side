@@ -22,7 +22,7 @@ const Addproduct = () => {
  console.log(product)
 
 
-   fetch('http://localhost:5000/product',{
+   fetch('https://food-beverage-server-9nzyy2omn-tanjils-projects.vercel.app/product',{
 
     method:'POST',
     headers:{

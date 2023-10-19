@@ -47,7 +47,7 @@ const router=createBrowserRouter([
      {
       path:'/product/:brand_name',
       element:<ProductById></ProductById>,
-      loader:()=>fetch('http://localhost:5000/product')
+      loader:()=>fetch('https://food-beverage-server-9nzyy2omn-tanjils-projects.vercel.app/product')
      
      },
      {
@@ -62,12 +62,12 @@ const router=createBrowserRouter([
      {
       path:'/details/:id',
       element:<PrivateDetails><DetailsOfProducts></DetailsOfProducts></PrivateDetails>,
-      loader:()=>fetch('http://localhost:5000/product')
+      loader:()=>fetch('https://food-beverage-server-9nzyy2omn-tanjils-projects.vercel.app/product')
      },
      {
       path:'/cart',
       element:<PrivateOfCart><CardAdd></CardAdd></PrivateOfCart>,
-      loader:()=>fetch('http://localhost:5000/cart')
+      loader:()=>fetch('https://food-beverage-server-9nzyy2omn-tanjils-projects.vercel.app/cart')
      },
      {
       path:'/update/:id',
