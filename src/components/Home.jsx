@@ -5,6 +5,7 @@ import Brands from "./Brands";
 import Footer from "./Footer";
 import Company from "./Company";
 import ClientsReviwe from "./ClientsReviwe";
+import { useState } from "react";
 
 
 
@@ -13,12 +14,34 @@ const Home = () => {
    
  const brands=useLoaderData()
  
+ const [darkMode, setDarkmode] = useState(false)
+
+
+
+
+
+
+
+ const toggleTheme = () => {
+  setDarkmode(!darkMode);
+
+};
+
+
+
+
+
+
+
+
+
+
 
 
 
 
     return (
-        <div className="">
+        <div className= {darkMode ? 'bg-black' : `bg-white`} onMouseUp={toggleTheme}>
          <Banner></Banner>
          <p className="text-center my-4 py-2 text-white rounded-lg bg-gradient-to-r from-green-600 to-orange-600 text-2xl font-bold">Choose Your Food Catogory</p>
          <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-5 p-12">
