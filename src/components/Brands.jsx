@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const Brands = ({brand}) => {
 
- const{brand_name,image}=brand;
+ const{brand_name,image,brandname}=brand;
 
 //`/product/${brand_name}` 
 
@@ -21,7 +21,7 @@ const Brands = ({brand}) => {
        <div  className="card  bg-base-100 ">
   <figure><img className='lg:w-[400px] w-full h-[200px]'  src={image} alt="food/beverage" /></figure>
   <div className="card-body">
-    <h2 className="text-center font-bold rounded-xl bg-green-600">{brand_name}</h2>
+    <h2 className="text-center font-bold rounded-xl bg-green-600">{brand_name? `${brand_name}`:`${brandname}`}</h2>
    
   </div>
   
