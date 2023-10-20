@@ -26,7 +26,7 @@ const CartShow = ({addCart,addCarts,setAddcarts}) => {
 
       .then((result) => {
         if (result.isConfirmed) {
-      fetch(`https://food-beverage-server-9nzyy2omn-tanjils-projects.vercel.app/cart/${_id}`,{
+      fetch(`https://food-beverage-server-qcaqn8gnx-tanjils-projects.vercel.app/cart/${_id}`,{
                 method:'DELETE'
              } )
              .then(res=>res.json())

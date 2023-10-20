@@ -29,7 +29,7 @@ const navigate=useNavigate()
           const updateProduct={name,image,type,price,rating,brandName}
            
    
-        fetch(`https://food-beverage-server-9nzyy2omn-tanjils-projects.vercel.app/update/${id}`,{
+        fetch(`https://food-beverage-server-qcaqn8gnx-tanjils-projects.vercel.app/update/${id}`,{
        method:'PUT',
     headers:{
         'content-type':'application/json'

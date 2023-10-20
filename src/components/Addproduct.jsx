@@ -22,7 +22,7 @@ const Addproduct = () => {
  console.log(product)
 
 
-   fetch('https://food-beverage-server-9nzyy2omn-tanjils-projects.vercel.app/product',{
+   fetch('https://food-beverage-server-qcaqn8gnx-tanjils-projects.vercel.app/product',{
 
     method:'POST',
     headers:{
