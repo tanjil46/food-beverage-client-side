@@ -13,5 +13,8 @@
 ## 5
 ### at first you have to login or resister to website otherwise you cant go product or you cant order.
 
+## Technologies 
+#### React, Node, Expressjs, Firebase, MongoDB, Tailwind css, JWT,Axios,Vercel
+
 [Wesite live link](https://food-beverage-user.web.app/)
 
